@@ -9,6 +9,13 @@
  * See LICENSE for the license information
  * -------------------------------------------------------------------------- */
 
+/*
+// To run this example, cd build and run:
+```
+./bin/multi-robot-example-ra-slam ../data/tiers.pyfg ../log/tiers_
+```
+*/
+
 #include <DCORA/Agent.h>
 #include <DCORA/DCORA_solver.h>
 #include <DCORA/DCORA_types.h>
@@ -78,6 +85,8 @@ int main(int argc, char **argv) {
   bool logData = true;
   std::string logDirectory = "/home/alex/data/dcora_dpgo_examples/"
                              "dcora_examples/multi_robot_example_ra_slam/";
+  if (argc > 2)
+    logDirectory = argv[2];
   DCORA::Logger logger(logDirectory);
   bool rbcd_only = false;
 

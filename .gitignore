@@ -1,6 +1,9 @@
 # Ignore C++ build directory
 build/*
 
+# Ignore log files
+log/*
+
 # Ignore temp files
 *.m~
 *.bib~
